@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleek n Shears - #1 Men's Saloon | FB Area, Karachi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            goldHover: '#B89628',
+                            whatsapp: '#25D366',
+                            whatsappDark: '#128C7E'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Montserrat', 'Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root[data-theme="dark"] {
+            --bg-primary: #0A0C10;
+            --bg-secondary: #12161F;
+            --bg-card: #181E29;
+            --text-main: #FFFFFF;
+            --text-muted: #A0AEC0;
+            --border-color: #2D3748;
+            --accent-gold: #F0C435;
+            --accent-glow: rgba(240, 196, 53, 0.2);
+            --header-bg: rgba(10, 12, 16, 0.95);
+        }
+
+        :root[data-theme="light"] {
+            --bg-primary: #F4F6F9;
+            --bg-secondary: #E2E8F0;
+            --bg-card: #FFFFFF;
+            --text-main: #0B0F19;
+            --text-muted: #4A5568;
+            --border-color: #CBD5E1;
+            --accent-gold: #B8860B;
+            --accent-glow: rgba(184, 134, 11, 0.15);
+            --header-bg: rgba(244, 246, 249, 0.95);
+        }
+
+        :root[data-theme="luxury"] {
+            --bg-primary: #14100C;
+            --bg-secondary: #211B14;
+            --bg-card: #2E251C;
+            --text-main: #FFFDF7;
+            --text-muted: #D1C2A5;
+            --border-color: #4D3E2E;
+            --accent-gold: #FFD700;
+            --accent-glow: rgba(255, 215, 0, 0.3);
+            --header-bg: rgba(20, 16, 12, 0.95);
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+            font-weight: 600;
+        }
+
+        h1, h2, h3, h4, .font-heavy {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900 !important;
+            letter-spacing: -0.02em;
+        }
+
+        .theme-card {
+            background-color: var(--bg-card);
+            border: 2px solid var(--border-color);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .theme-card:hover {
+            border-color: var(--accent-gold);
+            box-shadow: 0 12px 35px var(--accent-glow);
+        }
+
+        .theme-bg-secondary {
+            background-color: var(--bg-secondary);
+        }
+
+        .theme-header {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(16px);
+        }
+
+        .accent-text {
+            color: var(--accent-gold);
+        }
+
+        .accent-bg {
+            background-color: var(--accent-gold);
+        }
+
+        .accent-border {
+            border-color: var(--accent-gold);
+        }
+
+        /* Floating WhatsApp Pulse */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.9; }
+            50% { transform: scale(1.18); opacity: 0.4; }
+            100% { transform: scale(0.95); opacity: 0.9; }
+        }
+
+        .wa-pulse {
+            animation: pulse-ring 2.2s infinite ease-in-out;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-gold);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-amber-400 selection:text-black">
+
+    <header class="fixed top-0 left-0 w-full z-50 theme-header border-b-2 border-[var(--border-color)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 rounded-xl accent-bg text-black flex items-center justify-center font-black text-2xl shadow-xl group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-scissors"></i>
+                </div>
+                <div>
+                    <span class="font-heavy text-2xl tracking-wider block leading-tight accent-text uppercase">SLEEK N SHEARS</span>
+                    <span class="text-[11px] tracking-widest uppercase font-black text-[var(--text-muted)]">#1 MEN'S SALOON • FB AREA</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-extrabold text-sm uppercase tracking-wider">
+                <a href="#about" class="hover:accent-text transition-colors">About</a>
+                <a href="#services" class="hover:accent-text transition-colors">Services</a>
+                <a href="#reviews" class="hover:accent-text transition-colors">Reviews</a>
+                <a href="#location" class="hover:accent-text transition-colors">Location & Hours</a>
+            </nav>
+
+            <!-- Actions Right (Theme Switcher + Book Button) -->
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                
+                <!-- Theme Switcher Selector -->
+                <div class="relative inline-block text-left">
+                    <button id="themeDropdownBtn" onclick="toggleThemeMenu()" class="flex items-center space-x-2 px-3.5 py-2.5 rounded-xl theme-card text-xs sm:text-sm font-extrabold focus:outline-none uppercase tracking-wide">
+                        <i id="themeIcon" class="fa-solid fa-moon text-base accent-text"></i>
+                        <span id="themeLabel" class="hidden sm:inline">DARK</span>
+                        <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </button>
+
+                    <!-- Theme Menu Dropdown -->
+                    <div id="themeMenu" class="hidden absolute right-0 mt-2 w-44 rounded-2xl shadow-2xl theme-card py-2 z-50 text-xs font-extrabold uppercase">
+                        <button onclick="setTheme('dark')" class="w-full text-left px-4 py-3 hover:accent-bg hover:text-black flex items-center space-x-3 transition-colors">
+                            <i class="fa-solid fa-moon w-4 text-sm"></i>
+                            <span>Dark Mode</span>
+                        </button>
+                        <button onclick="setTheme('light')" class="w-full text-left px-4 py-3 hover:accent-bg hover:text-black flex items-center space-x-3 transition-colors">
+                            <i class="fa-solid fa-sun w-4 text-sm"></i>
+                            <span>Light Mode</span>
+                        </button>
+                        <button onclick="setTheme('luxury')" class="w-full text-left px-4 py-3 hover:accent-bg hover:text-black flex items-center space-x-3 transition-colors">
+                            <i class="fa-solid fa-crown w-4 text-sm text-amber-500"></i>
+                            <span>Luxury Gold</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Quick Action -->
+                <a href="https://wa.me/923042888704?text=Hello%20Sleek%20n%20Shears,%20I%20would%20like%20to%20book%20an%20appointment!" 
+                   target="_blank" 
+                   class="bg-[#25D366] hover:bg-[#20ba5a] text-white font-black uppercase px-4 py-2.5 sm:px-5 sm:py-2.5 rounded-xl shadow-lg transition-all flex items-center space-x-2 text-xs sm:text-sm transform active:scale-95 tracking-wide">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span class="hidden lg:inline">QUICK CHAT</span>
+                </a>
+
+                <!-- Open Booking Modal -->
+                <button onclick="openBookingModal()" class="accent-bg text-black font-black uppercase px-4 py-2.5 sm:px-5 sm:py-2.5 rounded-xl shadow-xl hover:brightness-110 transition-all text-xs sm:text-sm transform active:scale-95 tracking-wide">
+                    BOOK NOW
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-36 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80'); filter: grayscale(40%);"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--bg-primary)] to-[var(--bg-primary)] z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full theme-card text-xs font-black uppercase tracking-wider mb-6 accent-text border-2">
+                    <span class="flex h-2.5 w-2.5 rounded-full accent-bg animate-ping"></span>
+                    <span>#1 RATED MEN'S GROOMING LOUNGE • FB AREA</span>
+                </div>
+                <h1 class="font-heavy text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none mb-6">
+                    PREMIUM <br><span class="accent-text">BARBERING</span> & KERATIN CARE
+                </h1>
+                <p class="text-base sm:text-xl font-bold text-[var(--text-muted)] mb-8 max-w-2xl leading-relaxed">
+                    Karachi's top-rated destination for razor-sharp fade haircuts, royal beard sculpting, keratin smoothing treatments, and refreshing facials.
+                </p>
+
+                <div class="flex flex-wrap gap-4 items-center">
+                    <!-- WhatsApp Direct Button -->
+                    <a href="https://wa.me/923042888704?text=Hello%20Sleek%20n%20Shears,%20I%20want%20to%20book%20a%20grooming%20session." 
+                       target="_blank" 
+                       class="bg-[#25D366] hover:bg-[#1fb958] text-white font-black uppercase tracking-wider px-7 py-4 rounded-xl shadow-2xl flex items-center space-x-3 text-sm sm:text-base transition-transform transform hover:-translate-y-1">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>BOOK VIA WHATSAPP</span>
+                    </a>
+
+                    <!-- Interactive Appointment Modal Button -->
+                    <button onclick="openBookingModal()" class="theme-card hover:accent-border text-[var(--text-main)] font-black uppercase tracking-wider px-7 py-4 rounded-xl text-sm sm:text-base transition-all flex items-center space-x-2">
+                        <i class="fa-regular fa-calendar-check text-lg accent-text"></i>
+                        <span>SCHEDULE SLOT</span>
+                    </button>
+                </div>
+
+                <!-- Quick Stats Badge -->
+                <div class="mt-12 grid grid-cols-3 gap-4 border-t-2 border-[var(--border-color)] pt-8 max-w-lg">
+                    <div>
+                        <div class="text-3xl sm:text-4xl font-heavy font-black accent-text">4.9 ★</div>
+                        <div class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[var(--text-muted)] mt-1">170+ GOOGLE REVIEWS</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl sm:text-4xl font-heavy font-black accent-text">2 AM</div>
+                        <div class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[var(--text-muted)] mt-1">LATE NIGHT HOURS</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl sm:text-4xl font-heavy font-black accent-text">100%</div>
+                        <div class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[var(--text-muted)] mt-1">CLIENT SATISFACTION</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 theme-bg-secondary border-y-2 border-[var(--border-color)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest font-black accent-text mb-2">OUR CRAFT & SERVICES</h2>
+                <p class="font-heavy text-3xl sm:text-5xl font-black uppercase">SIGNATURE BARBERING</p>
+                <p class="text-[var(--text-muted)] text-sm sm:text-base font-bold mt-3">Select any service to directly schedule your appointment via WhatsApp.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="theme-card p-7 rounded-2xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl accent-glow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-scissors text-3xl accent-text"></i>
+                        </div>
+                        <h3 class="font-heavy text-2xl font-black uppercase mb-3">HAIRCUT & STYLING</h3>
+                        <p class="text-xs sm:text-sm font-bold text-[var(--text-muted)] leading-relaxed mb-6">Precision haircut tailored to your head shape, including hair wash, blow-dry styling, and premium wax finish.</p>
+                    </div>
+                    <div class="pt-5 border-t-2 border-[var(--border-color)] flex items-center justify-between">
+                        <span class="text-xs font-black uppercase tracking-wider accent-text">POPULAR CHOICE</span>
+                        <button onclick="bookSpecificService('Signature Haircut')" class="text-xs font-black uppercase tracking-wider hover:underline flex items-center space-x-1.5 accent-text">
+                            <span>BOOK WA</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="theme-card p-7 rounded-2xl flex flex-col justify-between group relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-amber-500/20 text-amber-500 font-black text-[10px] uppercase tracking-wider px-3 py-1 rounded-full border border-amber-500/40">
+                        TOP RATED
+                    </div>
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl accent-glow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-sparkles text-3xl accent-text"></i>
+                        </div>
+                        <h3 class="font-heavy text-2xl font-black uppercase mb-3">KERATIN TREATMENT</h3>
+                        <p class="text-xs sm:text-sm font-bold text-[var(--text-muted)] leading-relaxed mb-6">Deep conditioning keratin therapy to transform frizzy hair into silky, smooth, manageable hair with long-lasting shine.</p>
+                    </div>
+                    <div class="pt-5 border-t-2 border-[var(--border-color)] flex items-center justify-between">
+                        <span class="text-xs font-black uppercase tracking-wider accent-text">SPECIALIST CARE</span>
+                        <button onclick="bookSpecificService('Keratin Hair Treatment')" class="text-xs font-black uppercase tracking-wider hover:underline flex items-center space-x-1.5 accent-text">
+                            <span>BOOK WA</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="theme-card p-7 rounded-2xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl accent-glow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-user-ninja text-3xl accent-text"></i>
+                        </div>
+                        <h3 class="font-heavy text-2xl font-black uppercase mb-3">BEARD SCULPTING</h3>
+                        <p class="text-xs sm:text-sm font-bold text-[var(--text-muted)] leading-relaxed mb-6">Razor sharp beard outline trimming, hot towel treatment, beard oil massage, and precision shaping.</p>
+                    </div>
+                    <div class="pt-5 border-t-2 border-[var(--border-color)] flex items-center justify-between">
+                        <span class="text-xs font-black uppercase tracking-wider accent-text">GROOMING ESSENTIAL</span>
+                        <button onclick="bookSpecificService('Beard Sculpting')" class="text-xs font-black uppercase tracking-wider hover:underline flex items-center space-x-1.5 accent-text">
+                            <span>BOOK WA</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="theme-card p-7 rounded-2xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl accent-glow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-spa text-3xl accent-text"></i>
+                        </div>
+                        <h3 class="font-heavy text-2xl font-black uppercase mb-3">FACIAL & SKINCARE</h3>
+                        <p class="text-xs sm:text-sm font-bold text-[var(--text-muted)] leading-relaxed mb-6">Deep cleansing facial treatment, blackhead removal, scrub massage, and hydrating mask for refreshed skin.</p>
+                    </div>
+                    <div class="pt-5 border-t-2 border-[var(--border-color)] flex items-center justify-between">
+                        <span class="text-xs font-black uppercase tracking-wider accent-text">SKIN VITALITY</span>
+                        <button onclick="bookSpecificService('Facial & Skin Care')" class="text-xs font-black uppercase tracking-wider hover:underline flex items-center space-x-1.5 accent-text">
+                            <span>BOOK WA</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="theme-card p-7 rounded-2xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl accent-glow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-paint-brush text-3xl accent-text"></i>
+                        </div>
+                        <h3 class="font-heavy text-2xl font-black uppercase mb-3">HAIR COLORING</h3>
+                        <p class="text-xs sm:text-sm font-bold text-[var(--text-muted)] leading-relaxed mb-6">Ammonia-free hair coloring, fashion highlights, grey coverage, and beard dyeing with premium products.</p>
+                    </div>
+                    <div class="pt-5 border-t-2 border-[var(--border-color)] flex items-center justify-between">
+                        <span class="text-xs font-black uppercase tracking-wider accent-text">COLOR CARE</span>
+                        <button onclick="bookSpecificService('Hair Color')" class="text-xs font-black uppercase tracking-wider hover:underline flex items-center space-x-1.5 accent-text">
+                            <span>BOOK WA</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="theme-card p-7 rounded-2xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl accent-glow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-hand-holding-heart text-3xl accent-text"></i>
+                        </div>
+                        <h3 class="font-heavy text-2xl font-black uppercase mb-3">SCALP MASSAGE</h3>
+                        <p class="text-xs sm:text-sm font-bold text-[var(--text-muted)] leading-relaxed mb-6">Stress-relieving head, neck, and shoulder massage with nourishing herbal oils to enhance circulation.</p>
+                    </div>
+                    <div class="pt-5 border-t-2 border-[var(--border-color)] flex items-center justify-between">
+                        <span class="text-xs font-black uppercase tracking-wider accent-text">RELAXATION</span>
+                        <button onclick="bookSpecificService('Scalp Massage')" class="text-xs font-black uppercase tracking-wider hover:underline flex items-center space-x-1.5 accent-text">
+                            <span>BOOK WA</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+                <div>
+                    <h2 class="text-xs uppercase tracking-widest font-black accent-text mb-2">VERIFIED REVIEWS</h2>
+                    <p class="font-heavy text-3xl sm:text-5xl font-black uppercase">WHAT CLIENTS SAY</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex items-center space-x-3">
+                    <div class="text-right">
+                        <div class="flex items-center space-x-1 text-amber-400 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="text-xs font-black uppercase tracking-wider text-[var(--text-muted)] mt-1">170+ REVIEWS ON GOOGLE</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="theme-card p-7 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-400 text-xs mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm font-bold text-[var(--text-muted)] italic leading-relaxed mb-6">
+                            "I would like to extend my sincere appreciation to Mr. Ahsan for the exceptional keratin treatment, as well as the precise haircut and styling... I am thoroughly satisfied with the impeccable results!"
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-5 border-t-2 border-[var(--border-color)]">
+                        <div class="w-10 h-10 rounded-xl accent-bg text-black font-black flex items-center justify-center text-sm">M</div>
+                        <div>
+                            <div class="text-sm font-black uppercase">Verified Client</div>
+                            <div class="text-[10px] font-bold text-[var(--text-muted)] uppercase">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="theme-card p-7 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-400 text-xs mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm font-bold text-[var(--text-muted)] italic leading-relaxed mb-6">
+                            "Best men's saloon in FB Area! The atmosphere is clean, hygienic, and modern. Their beard grooming and hair styling skills are unmatched in Gulberg Town."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-5 border-t-2 border-[var(--border-color)]">
+                        <div class="w-10 h-10 rounded-xl accent-bg text-black font-black flex items-center justify-center text-sm">K</div>
+                        <div>
+                            <div class="text-sm font-black uppercase">Karachi Resident</div>
+                            <div class="text-[10px] font-bold text-[var(--text-muted)] uppercase">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="theme-card p-7 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-400 text-xs mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm font-bold text-[var(--text-muted)] italic leading-relaxed mb-6">
+                            "Open till 2:00 AM which is extremely convenient after long work hours! Staff is friendly and professional. Highly recommend their facial treatments."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-5 border-t-2 border-[var(--border-color)]">
+                        <div class="w-10 h-10 rounded-xl accent-bg text-black font-black flex items-center justify-center text-sm">A</div>
+                        <div>
+                            <div class="text-sm font-black uppercase">Regular Customer</div>
+                            <div class="text-[10px] font-bold text-[var(--text-muted)] uppercase">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-20 theme-bg-secondary border-t-2 border-[var(--border-color)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                
+                <div>
+                    <h2 class="text-xs uppercase tracking-widest font-black accent-text mb-2">VISIT OUR SALOON</h2>
+                    <p class="font-heavy text-3xl sm:text-4xl font-black uppercase mb-8">LOCATION & TIMINGS</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Address -->
+                        <div class="theme-card p-6 rounded-2xl flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl accent-glow flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot accent-text text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heavy text-lg font-black uppercase mb-1">SALON ADDRESS</h4>
+                                <p class="text-xs sm:text-sm font-bold text-[var(--text-muted)] leading-relaxed">
+                                    Plot no, BS 9 shop, Street No. 5, Block-12, FB Area, Gulberg Town, Karachi, Sindh, Pakistan.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="theme-card p-6 rounded-2xl flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl accent-glow flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-clock accent-text text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heavy text-lg font-black uppercase mb-1">OPERATING HOURS</h4>
+                                <p class="text-xs sm:text-sm font-bold text-[var(--text-muted)]">
+                                    <strong>Monday – Sunday:</strong> 12:00 PM – 2:00 AM
+                                </p>
+                                <span class="inline-block text-[10px] font-black uppercase bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-md mt-2 border border-emerald-500/30">
+                                    LATE NIGHT SERVICE AVAILABLE
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Amenities Grid -->
+                        <div class="theme-card p-6 rounded-2xl">
+                            <h4 class="font-heavy text-lg font-black uppercase mb-4">SALON HIGHLIGHTS</h4>
+                            <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm font-bold text-[var(--text-muted)]">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-wifi text-emerald-500 text-sm"></i>
+                                    <span>FREE WI-FI</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-square-parking text-emerald-500 text-sm"></i>
+                                    <span>ON-SITE PARKING</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-credit-card text-emerald-500 text-sm"></i>
+                                    <span>CARD & NFC PAYMENTS</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-person-walking text-emerald-500 text-sm"></i>
+                                    <span>WALK-INS WELCOME</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-child text-emerald-500 text-sm"></i>
+                                    <span>KID-FRIENDLY</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-snowflake text-emerald-500 text-sm"></i>
+                                    <span>AIR-CONDITIONED</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right: Direct WhatsApp Form -->
+                <div class="theme-card p-7 sm:p-9 rounded-3xl relative">
+                    <div class="mb-6">
+                        <span class="text-xs uppercase tracking-widest font-black accent-text block mb-1">INSTANT APPOINTMENT</span>
+                        <h3 class="font-heavy text-3xl font-black uppercase">SCHEDULE SLOT</h3>
+                        <p class="text-xs font-bold text-[var(--text-muted)] mt-1">
+                            Fills your message automatically and opens direct WhatsApp chat with +92 304 2888704.
+                        </p>
+                    </div>
+
+                    <form id="waBookingForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-black uppercase mb-1.5 opacity-90">FULL NAME</label>
+                            <input type="text" id="custName" required placeholder="e.g. Ali Ahmed" 
+                                   class="w-full px-4 py-3 rounded-xl theme-bg-secondary border-2 border-[var(--border-color)] text-xs font-bold focus:outline-none focus:border-[var(--accent-gold)]">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-black uppercase mb-1.5 opacity-90">SELECT SERVICE</label>
+                            <select id="custService" required class="w-full px-4 py-3 rounded-xl theme-bg-secondary border-2 border-[var(--border-color)] text-xs font-bold focus:outline-none focus:border-[var(--accent-gold)]">
+                                <option value="Signature Haircut & Styling">Signature Haircut & Styling</option>
+                                <option value="Keratin Hair Treatment">Keratin Hair Treatment</option>
+                                <option value="Royal Beard Sculpting">Royal Beard Sculpting</option>
+                                <option value="Facial & Skin Care">Facial & Skin Care Treatment</option>
+                                <option value="Hair Coloring & Dye">Hair Coloring & Dye</option>
+                                <option value="Scalp Therapy Massage">Scalp Therapy Massage</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-black uppercase mb-1.5 opacity-90">PREFERRED DATE</label>
+                                <input type="date" id="custDate" required class="w-full px-4 py-3 rounded-xl theme-bg-secondary border-2 border-[var(--border-color)] text-xs font-bold focus:outline-none focus:border-[var(--accent-gold)]">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-black uppercase mb-1.5 opacity-90">PREFERRED TIME</label>
+                                <input type="time" id="custTime" required class="w-full px-4 py-3 rounded-xl theme-bg-secondary border-2 border-[var(--border-color)] text-xs font-bold focus:outline-none focus:border-[var(--accent-gold)]">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-black uppercase mb-1.5 opacity-90">SPECIAL NOTES (OPTIONAL)</label>
+                            <input type="text" id="custNotes" placeholder="e.g. Request Mr. Ahsan for haircut" 
+                                   class="w-full px-4 py-3 rounded-xl theme-bg-secondary border-2 border-[var(--border-color)] text-xs font-bold focus:outline-none focus:border-[var(--accent-gold)]">
+                        </div>
+
+                        <button type="submit" class="w-full bg-[#25D366] hover:bg-[#1fb958] text-white font-black uppercase tracking-wider py-4 rounded-xl shadow-xl transition-all flex items-center justify-center space-x-2 text-sm">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>CONFIRM VIA WHATSAPP</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t-2 border-[var(--border-color)] py-12 theme-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl accent-bg text-black flex items-center justify-center font-black text-lg">
+                    <i class="fa-solid fa-scissors"></i>
+                </div>
+                <span class="font-heavy text-xl font-black uppercase tracking-wider">SLEEK N SHEARS</span>
+            </div>
+            
+            <p class="text-xs font-bold text-[var(--text-muted)] text-center uppercase tracking-wider">
+                © 2026 SLEEK N SHEARS • #1 MEN'S SALOON (FB AREA KARACHI)
+            </p>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/923042888704" target="_blank" class="w-10 h-10 rounded-xl theme-card flex items-center justify-center text-sm hover:accent-text transition-colors">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="tel:+923042888704" class="w-10 h-10 rounded-xl theme-card flex items-center justify-center text-sm hover:accent-text transition-colors">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Launcher -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center group">
+        <div class="hidden sm:block mr-3 px-4 py-2 rounded-xl theme-card text-xs font-black uppercase tracking-wider shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            CHAT ON WHATSAPP
+        </div>
+        <a href="https://wa.me/923042888704?text=Hello%20Sleek%20n%20Shears,%20I%20would%20like%20to%20book%20an%20appointment!" 
+           target="_blank" 
+           aria-label="Direct WhatsApp Chat"
+           class="relative w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform">
+            <span class="absolute inset-0 rounded-full bg-[#25D366] wa-pulse -z-10"></span>
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="theme-card max-w-md w-full rounded-3xl p-7 relative">
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 w-9 h-9 rounded-xl theme-bg-secondary flex items-center justify-center text-sm font-bold hover:accent-text">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="font-heavy text-2xl font-black uppercase mb-1">QUICK BOOKING</h3>
+            <p class="text-xs font-bold text-[var(--text-muted)] mb-6">Select details to initiate WhatsApp appointment booking.</p>
+
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-black uppercase mb-1">YOUR NAME</label>
+                    <input type="text" id="modalName" required placeholder="Name" class="w-full px-4 py-3 rounded-xl theme-bg-secondary border-2 border-[var(--border-color)] text-xs font-bold focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-black uppercase mb-1">SERVICE REQUIRED</label>
+                    <select id="modalService" required class="w-full px-4 py-3 rounded-xl theme-bg-secondary border-2 border-[var(--border-color)] text-xs font-bold focus:outline-none">
+                        <option value="Haircut & Styling">Haircut & Styling</option>
+                        <option value="Keratin Treatment">Keratin Hair Treatment</option>
+                        <option value="Beard Sculpting">Beard Sculpting</option>
+                        <option value="Facial Cleansing">Facial Cleansing</option>
+                        <option value="Hair Color">Hair Color</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-black uppercase mb-1">PREFERRED TIME & DAY</label>
+                    <input type="text" id="modalTime" required placeholder="e.g. Today at 7 PM" class="w-full px-4 py-3 rounded-xl theme-bg-secondary border-2 border-[var(--border-color)] text-xs font-bold focus:outline-none">
+                </div>
+                <button type="submit" class="w-full bg-[#25D366] hover:bg-[#1fb958] text-white font-black uppercase tracking-wider py-3.5 rounded-xl text-xs flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>SEND TO WHATSAPP (+92 304 2888704)</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('sleek_theme', theme);
+
+            const icon = document.getElementById('themeIcon');
+            const label = document.getElementById('themeLabel');
+
+            if (theme === 'dark') {
+                icon.className = 'fa-solid fa-moon text-base accent-text';
+                label.textContent = 'DARK';
+            } else if (theme === 'light') {
+                icon.className = 'fa-solid fa-sun text-base accent-text';
+                label.textContent = 'LIGHT';
+            } else if (theme === 'luxury') {
+                icon.className = 'fa-solid fa-crown text-base text-amber-500';
+                label.textContent = 'LUXURY';
+            }
+
+            document.getElementById('themeMenu').classList.add('hidden');
+        }
+
+        function toggleThemeMenu() {
+            const menu = document.getElementById('themeMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        window.addEventListener('click', function(e) {
+            const btn = document.getElementById('themeDropdownBtn');
+            const menu = document.getElementById('themeMenu');
+            if (btn && menu && !btn.contains(e.target) && !menu.contains(e.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        (function initTheme() {
+            const savedTheme = localStorage.getItem('sleek_theme') || 'dark';
+            setTheme(savedTheme);
+        })();
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('custName').value;
+            const service = document.getElementById('custService').value;
+            const date = document.getElementById('custDate').value;
+            const time = document.getElementById('custTime').value;
+            const notes = document.getElementById('custNotes').value;
+
+            let msg = `Hello Sleek n Shears! I would like to book an appointment:%0A%0A`;
+            msg += `*Name:* ${encodeURIComponent(name)}%0A`;
+            msg += `*Service:* ${encodeURIComponent(service)}%0A`;
+            msg += `*Date:* ${encodeURIComponent(date)}%0A`;
+            msg += `*Time:* ${encodeURIComponent(time)}%0A`;
+            if (notes) msg += `*Notes:* ${encodeURIComponent(notes)}`;
+
+            window.open(`https://wa.me/923042888704?text=${msg}`, '_blank');
+        }
+
+        function bookSpecificService(serviceName) {
+            const msg = `Hello Sleek n Shears! I would like to book an appointment for *${encodeURIComponent(serviceName)}*.`;
+            window.open(`https://wa.me/923042888704?text=${msg}`, '_blank');
+        }
+
+        function openBookingModal() {
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('modalName').value;
+            const service = document.getElementById('modalService').value;
+            const time = document.getElementById('modalTime').value;
+
+            let msg = `Hello Sleek n Shears! I want to book a quick appointment:%0A%0A`;
+            msg += `*Name:* ${encodeURIComponent(name)}%0A`;
+            msg += `*Service:* ${encodeURIComponent(service)}%0A`;
+            msg += `*Preferred Slot:* ${encodeURIComponent(time)}`;
+
+            window.open(`https://wa.me/923042888704?text=${msg}`, '_blank');
+            closeBookingModal();
+        }
+    </script>
+</body>
+</html>
